@@ -12,14 +12,16 @@ To get started with the project, you will need to have NodeJS downloaded and ins
 
 You will also require MySQL to be installed which can be found [here](https://dev.mysql.com/downloads/installer/).
 
+Please download the project files
+
 ### Setting up the database
-The data required to run the project can be found [here]. For Windows please download the data file and place it in the following location: C:\Program Files\MySQL\MySQL Server 8.0\bin.
-Once the file is in the correct location, please open up the terminal and go to the directory where the data file is placed. If the default installation was followed, it should be C:\Program Files\MySQL\MySQL Server 8.0\bin.
-Once in that directory, use the following command: **mysql -u {username} -p**. By default the username should be **root**.
-Once connected, enter the following commands: 
-  - create database project_db;
-  - use project_db;
-  - source project_website_data.sql;
+Once the project files are downloaded please carry out the following steps:
+  - Inside the project files, there is a file called project_website_data.sql which contains all the SQL data for the project. Place this file in the following directory: C:\Program Files\MySQL\MySQL Server 8.0\bin.
+  - Open command prompt and go to C:\Program Files\MySQL\MySQL Server 8.0\bin and run the following command: **mysql -u root -p**
+  - Enter the password
+  - Run the following command: **create database project_db**;
+  - Run the following command: **use project_db**;
+  - Run the following command: **source project_website_data.sql**;
 The above commands will load all the necessary data into project_db database. If you use a different name while creating the database, please update the name in the index.js file of server.
 
 ### Setting up the backend
