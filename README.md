@@ -4,9 +4,14 @@ The purpose of this website is to allow users to enter what subjects they liked 
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
+- [Starting The Project](#starting-the-project)
+- [Project Inspiration](#project-inspiration)
+- [Project Goals and Minimum Viable Product](#project-goals-and-minimum-viable-product)
+- [Initial Designs and Problems](#initial-design-and-problems)
+- [Final Design and Why It's Better](#final-design-and-why-it-works)
+- [Tech Stack](#tech-stack)
 
-## Getting Started
+## Starting The Project
 
 To get started with the project, you will need to have NodeJS downloaded and installed on your machine. You can download it from [here](https://nodejs.org).
 
@@ -33,5 +38,23 @@ The above commands will load all the necessary data into project_db database. If
 ### Setting up the frontend
   - In VSCode, open a separate terminal while keeping the backend terminal running. Navigate to the client folder of the project in the terminal
   - Please run the command: npm install
-  - Once the dependencies are installed, the project can be started with the following command from client : npm run dev
+  - Once the dependencies are installed, the project can be started with the following command from client terminal: npm run dev
   - The running application can be accessed via a web browser using: http://localhost:5173/
+
+## Project Inspiration
+From the experiences of some close friends and my own, I found that after high school I wasn’t sure what career I wanted and it was somewhat challenging to narrow down future education pathways based on the subjects I liked at school. So I have decided to build a web application that would allow users to select subjects they liked and give a numerical rating. Based on user inputs, the application would display several relevant tertiary education pathways.
+
+## Project Goals and Minimum Viable Product
+The goal of this project is to allow people to enter their subject preferences/likings and for the application to output a number of relevant university courses. The minimum viable product for this app will be a home page which explains the user what the website does and a courses page which displays the relevant courses based on the user's subject selections.
+
+## Initial Design and Problems
+Display a list of subjects for the user to rate based on their likings and preferences. Offer some numerical rating scale (1-5 or 1-10). The user would select ratings for all the subjects and then a database query would be performed to find university courses that would match the ratings given by the user. The university courses available would be fetched and stored to a database using web scraping (would only need to be done once thus it shouldn’t raise any concerns with regards to the ethics of web scraping). Once all the courses are fetched, I would attach subject ratings to all the courses. This would be based purely on research, however, I am afraid it would be impossible to be completely unbiased. Thus I would put a disclaimer for the user explaining some bias may be present.
+Having the user rank each subject (some of which the user might not have studied) isn’t a great design from a UX standpoint. Moreover, once the user would be done assigning scores to each subject, a lot of the data might get skewed if the user decides to give scores just based on their liking of the subject even though they might not have any interest in pursuing it in the future. Furthermore, if we have like 10 subjects or something along those lines, the SQL search would be extremely computationally expensive if the app was to be scaled up.
+
+
+## Final Design and Why It's Better
+The user will be asked to select three subjects of their liking starting from their favorite/most desired subject first. This information can then be utilised with a trie/prefix-tree data structure which would hold all the university courses based on relevant high school subjects assigned by myself after some research. This would allow for an efficient lookup based on the user selection as well as facilitate some clever ways to find related university degrees, which may be relevant to the subject likings of the user. For example lets say the user selects Maths, Physics and IT as their preferred subjects, the app should suggest them an undergraduate degree like Mechatronic Engineering. The time complexity would be O(n) to find relevant subjects where n is the number of subjects chosen. While that may be the value obtained by traversing the prefix tree with Maths, Phys and IT nodes, we might also want to display other relevant subjects. This design model also makes it easy to find those subjects by allowing us to manipulate the prefix combinations and find similar subjects.
+
+An example prefix tree is shown below. The tree isn’t accurate and I have just drawn it for demonstration purposes without any research. The point of the diagram is to show, if a student was to enter Maths, Phys and IT as his subjects of preference, it would be quite simple and not very computationally expensive to gather undergraduate courses relevant to the subjects selected by traversing the tree with different combinations of the selected subjects. The search can be narrowed by swapping only using combinations of the first two out of three preferences and keeping the third the same.
+
+## Tech Stack
