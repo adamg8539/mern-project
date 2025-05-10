@@ -10,6 +10,7 @@ The purpose of this website is to allow users to enter what subjects they liked 
 - [Initial Designs and Problems](#initial-design-and-problems)
 - [Final Design and Why It's Better](#final-design-and-why-it's-better)
 - [Tech Stack](#tech-stack)
+- [Project-Implementation-Steps](#project-implementation-steps)
 
 ## Starting The Project
 
@@ -63,3 +64,13 @@ An example prefix tree is shown below. The tree isn’t accurate and I have just
 **MySQL**: The database will mainly be used for storing the courses available from a selected university, their subject relations set by myself and the course descriptions and any other useful relevant information. There won’t be a great load on the database as once the courses are stored and subjects are assigned to each course, it will only be required upon the program load in order to build our prefix tree/trie and this will be stored in memory so we won’t utilise the database further. The database will be used for user sign ups and logins but that won’t require any special considerations as those operations will be infrequent. Thus based on the needs above, a relational database such as MySQL will be perfectly suitable for this application.
 
 **ReactJS**: The front end will be designed by using ReactJS as it ensures good coding practices and allows reusability of code. It also integrates very well with other useful libraries such as MaterialUI or Redux. It is also fast, SEO-friendly and can work well even with highload systems.
+
+## Project Implementation Steps
+- Build backend apis to store course information to database
+- Webscrape UNSW website to fetch all undergraduate courses and store the relevant information using the backend apis created
+- Build backend apis to allow the developer (myself) fetch course information
+- Build backend apis to allow the developer (myself) to assign each course relevant subjects based on understanding and research
+- Build a quick minimalistic front end to allow the developer to assign each course the relevant subjects by using the backend apis created. This is done in order to not have to write SQL queries manually which can result in errors over time.
+- Build backend apis to fetch a course and it's assigned subjects
+- Build and load the prefix tree in memory by fetching all courses and their assigned subjects
+- Build a front end for the user
