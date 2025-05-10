@@ -8,7 +8,7 @@ The purpose of this website is to allow users to enter what subjects they liked 
 - [Project Inspiration](#project-inspiration)
 - [Project Goals and Minimum Viable Product](#project-goals-and-minimum-viable-product)
 - [Initial Designs and Problems](#initial-design-and-problems)
-- [Final Design and Why It's Better](#Final-Design-and-Why-It's-Better)
+- [Final Design and Why It's Better](#final-design-and-strengths)
 - [Tech Stack](#tech-stack)
 - [Project-Implementation-Steps](#project-implementation-steps)
 
@@ -53,7 +53,7 @@ Display a list of subjects for the user to rate based on their likings and prefe
 Having the user rank each subject (some of which the user might not have studied) isn’t a great design from a UX standpoint. Moreover, once the user would be done assigning scores to each subject, a lot of the data might get skewed if the user decides to give scores just based on their liking of the subject even though they might not have any interest in pursuing it in the future. Furthermore, if we have like 10 subjects or something along those lines, the SQL search would be extremely computationally expensive if the app was to be scaled up.
 
 
-## Final Design and Why It's Better
+## Final Design and Strengths
 The user will be asked to select three subjects of their liking starting from their favorite/most desired subject first. This information can then be utilised with a trie/prefix-tree data structure which would hold all the university courses based on relevant high school subjects assigned by myself after some research. This would allow for an efficient lookup based on the user selection as well as facilitate some clever ways to find related university degrees, which may be relevant to the subject likings of the user. For example lets say the user selects Maths, Physics and IT as their preferred subjects, the app should suggest them an undergraduate degree like Mechatronic Engineering. The time complexity would be O(n) to find relevant subjects where n is the number of subjects chosen. While that may be the value obtained by traversing the prefix tree with Maths, Phys and IT nodes, we might also want to display other relevant subjects. This design model also makes it easy to find those subjects by allowing us to manipulate the prefix combinations and find similar subjects.
 
 An example prefix tree is shown below. The tree isn’t accurate and I have just drawn it for demonstration purposes without any research. The point of the diagram is to show, if a student was to enter Maths, Phys and IT as his subjects of preference, it would be quite simple and not very computationally expensive to gather undergraduate courses relevant to the subjects selected by traversing the tree with different combinations of the selected subjects. The search can be narrowed by swapping only using combinations of the first two out of three preferences and keeping the third the same.
