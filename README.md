@@ -8,7 +8,7 @@ The purpose of this website is to allow users to enter what subjects they liked 
 - [Project Inspiration](#project-inspiration)
 - [Project Goals and Minimum Viable Product](#project-goals-and-minimum-viable-product)
 - [Initial Designs and Problems](#initial-design-and-problems)
-- [Final Design and Why It's Better](#final-design-and-why-it's-better)
+- [Final Design and Why It's Better](#Final-Design-and-Why-It's-Better)
 - [Tech Stack](#tech-stack)
 - [Project-Implementation-Steps](#project-implementation-steps)
 
