@@ -1,0 +1,40 @@
+.subject_options{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.subject_list_item{
+  float: left;
+  text-align: left;
+  width: 35%;
+}
+
+.subject_option_item, .selected_subject_item{
+  /* display: flex; 
+  position: relative;  */
+  padding: 0.5rem; 
+  border-radius: 0.25rem; 
+  border-width: 1px; 
+  background-color: #F3F4F6; 
+  cursor: pointer;
+}
+
+.selected_list_item{
+  display: inline-block;
+  width: 35%;
+}
+
+.selected_subject_item{
+  min-height: 1.5rem;
+  text-align: left;
+}
+
+.submit_button{
+  margin-left: 0;
+  background-color: purple;
+}
+
+/* .subject_list_item {
+  width: 35%;
+} */

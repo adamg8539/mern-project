@@ -1,0 +1,30 @@
+.find_courses_page_data {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin-left: 15%;
+  padding-top: 50px;
+}
+
+.fetch_courses_button{
+  width: 100%;
+}
+
+.user_options{
+  width: 35%;
+}
+
+.contact_page {
+  height: 100%;
+  text-align: left;
+}
+
+.home_page_data {
+  padding-left: 5%;
+  /* width: 70%; */
+  text-align: left;
+}
+
+.contact_page_data {
+  padding-left: 5%;
+}

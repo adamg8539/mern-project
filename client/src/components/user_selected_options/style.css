@@ -1,0 +1,25 @@
+.user_selected_list{
+  /* display: flex; 
+  position: relative;  */
+  display: inline-block;
+  width: 100%;
+  /* width: 35%; */
+}
+
+.user_selected_subject_item{
+  padding: 0.5rem; 
+  border-radius: 0.25rem; 
+  border-width: 1px; 
+  background-color: #F3F4F6; 
+  cursor: pointer;
+  min-height: 2.5rem;
+  text-align: left;
+}
+
+.remove_selected_subject_button {
+  float: right;
+  height: 100%;
+  line-height: 0;
+  background-color: darkred;
+  max-width: 10%;
+}

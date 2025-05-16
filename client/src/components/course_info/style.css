@@ -1,0 +1,19 @@
+.course_data_item {
+  width: 100%;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.course_title {
+  text-align: left;
+}
+
+.btn_item {
+  background-color: darkgrey;
+  margin-top: 25px;
+  width: 50%;
+}
+
+/* .subject_options {
+  width: 35%;
+} */
