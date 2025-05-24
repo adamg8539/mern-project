@@ -11,7 +11,7 @@ The purpose of this website is to allow users to enter what subjects they liked 
 - [Final Design and Why It's Better](#final-design-and-strengths)
 - [Tech Stack](#tech-stack)
 - [Project-Implementation-Steps](#project-implementation-steps)
-- [Wireframes-(generated-using-Figma)](#wireframes-(generated-using-figma))
+- [Wireframes-(generated-using-Figma)](#wireframes-generated-using-figma)
 
 ## Starting The Project
 
