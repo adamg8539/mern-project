@@ -74,3 +74,6 @@ An example prefix tree is shown below. The tree isn’t accurate and I have just
 - Build backend apis to fetch a course and it's assigned subjects
 - Build and load the prefix tree in memory by fetching all courses and their assigned subjects
 - Build a front end for the user
+
+## Wireframes (generated using Figma)
+![image](https://github.com/user-attachments/assets/a08dde03-d379-459c-8024-4836fc8925ba)
