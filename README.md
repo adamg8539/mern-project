@@ -77,5 +77,6 @@ An example prefix tree is shown below. The tree isn’t accurate and I have just
 - Build a front end for the user
 
 ## Wireframes (generated using Figma)
-![image](https://github.com/user-attachments/assets/da6c33a8-f1c3-4fad-805a-94d3c47df2af)
+![image](https://github.com/user-attachments/assets/3fa8c308-ff72-453d-8630-8852368f5d01)
+
 
